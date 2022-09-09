@@ -12,7 +12,7 @@ services:
      MYSQL_DATABASE: dbname
      MYSQL_PASSWORD: test
      MYSQL_ROOT_PASSWORD: test
-    volumnes:
+    volumes:
       - ./db_data:/var/lib/mysql
 
   www:
@@ -20,7 +20,7 @@ services:
     ports: 
         - 80:80
     volumes:
-        - /Users/carlosvasquez/Desktop/personal/historiaclinica:/var/www/html
+        - /home/hrmendezg/personalProjects/historiaclinica:/var/www/html
     links:
         - db
     networks:

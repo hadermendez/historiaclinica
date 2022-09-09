@@ -1,2 +1,3 @@
 <?php
-echo "hola marihuanos";
+
+require_once "modelo/conexion.php";

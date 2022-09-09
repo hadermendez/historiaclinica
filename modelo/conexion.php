@@ -1,6 +1,10 @@
 <?php 
-$nombre = $_POST['nombre'];
-$pass = $_POST['password'];
+echo "hola marihuanos";
 
-$con = mysqli_connect("localhost","root","root","usuarios");
-$query = "select * from clientes where username='".$nombre."' and contra='".$pass."'";
+$con = mysqli_connect("localhost","root","test","dbname");
+
+if($con){
+	echo "conectado";
+}else{
+	echo "no se conecto";
+}
