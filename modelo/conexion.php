@@ -1,14 +1,6 @@
 <?php 
+$nombre = $_POST['nombre'];
+$pass = $_POST['password'];
 
-class Conexion{
-
-	static public function conectar(){
-
-		$link = new PDO("mysql:host=localhost;dbname=histcli","root","black");
-
-		$link->exec("set names utf8");
-
-		return $link;
-	}
- }
-?>
+$con = mysqli_connect("localhost","root","root","usuarios");
+$query = "select * from clientes where username='".$nombre."' and contra='".$pass."'";
